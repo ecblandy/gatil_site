@@ -106,7 +106,7 @@ header {
     height: 2px; /* Altura da linha */
     background-color: rgba(83, 83, 83, 0.801); /* Cor da linha */
     transform: scaleX(0); /* Escala inicial para não ser visível */
-    transition: transform .4s ease; /* Transição suave para transformação */
+    transition: transform .2s ease; /* Transição suave para transformação */
 }
 
 .menu a::before, .hover-linha::before {
