@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+body {
+    height: 700vh;
+    width: 100%;
+    background-color: #ccc;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #4e4640;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.menu--item {
+    color: #4e4640;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-size: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu a:hover, .menu--item:hover {
+    color: #72665d;
+}
+
+.menu img {
+    width: 75px;
+    object-fit: contain;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.submenu {
+    position: absolute;
+    background-color: #4e4640;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: 400;
+    left: 0;
+    right: 0;
+    top:100%;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.dropdown:hover img {
+    transform: rotate(360deg);
+    transform-origin: left top 0;
+    right: -15px;
+}
+
+.submenu li a {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.submenu li {
+    padding: 10px 0;
+    border-bottom: 1px solid #D2B48C;
+}
+
+.submenu li a:hover {
+    color: #D2B48C;
+}
+
+.menu a, .hover-linha {
+    position: relative;
+}
+
+.menu a::after, 
+.menu a::before,
+.hover-linha::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px; /* Altura da linha */
+    background-color: rgba(83, 83, 83, 0.801); /* Cor da linha */
+    transform: scaleX(0); /* Escala inicial para não ser visível */
+    transition: transform .4s ease; /* Transição suave para transformação */
+}
+
+.menu a::before, .hover-linha::before {
+    top: 0; /* Posição superior */
+    left: 0;
+    transform-origin: left;
+}
+
+.menu a::after {
+    bottom: 0; /* Posição inferior */
+    left: 0;
+    transform-origin: left;
+}
+
+.dropdown img {
+    transform: rotate(90deg);
+    width: 10px;
+    position: absolute;
+    right: -10px;
+    bottom: 13px;
+}
+
+
+.menu a:hover::before,
+.menu a:hover::after,
+.hover-linha:hover::before {
+    transform: scaleX(1);
+}
+
+
+  
