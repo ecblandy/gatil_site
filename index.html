@@ -4,51 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./img/animal.png" type="image/x-icon">
-    <link rel="stylesheet" href="main.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/icons8-gato-96.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/main.css">
     <title>Gatil SpiritLand</title>
 </head>
 <body>
     <header>
-       <div class="container">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="https://lirp.cdn-website.com/e23a8022/dms3rep/multi/opt/gatilspiritland-152w.png" alt="Logo SpiritLand">
-            </div>
-            
-            <ul class="menu">
-                <li class="menu--item"><a href="#">Home</a></li>
-                <li class="menu--item"><a href="#">Sobre</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Filhotes</a></li>
-                <li  class="menu--item hover-linha dropdown">
-                    Nossos Gatos
-                    <img id="arrow" class="submenu--active" src="./img/arrow-down-sign-to-navigate.png" alt="arrow left">
-                    <ul class="submenu togle">
-                        <li class="submenu--item togle"><a href="#">Norueguês da floresta</a></li>
-                        <li class="submenu--item togle"><a href="#">Ragdoll</a></li>
-                        <li class="submenu--item togle"><a href="#">Britsh</a></li>
-                        <li class="submenu--item togle"><a href="#">Minuet</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="menu--hamburger">
-              <div class="burger">
-                  <span class="burgertop"></span>
-                  <span class="burgermiddle"></span>
-                  <span class="burgerbottom"></span>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="https://lirp.cdn-website.com/e23a8022/dms3rep/multi/opt/gatilspiritland-152w.png" alt="Logo SpiritLand">
                 </div>
-                <div class="burgerclose">
-                  <span class="burgerclosetop"></span>
-                  <span class="burgerclosebottom"></span>
+                
+                <ul class="menu">
+                    <li class="menu--item"><a href="#">Home</a></li>
+                    <li class="menu--item"><a href="#">Sobre</a></li>
+                    <li class="menu--item web"><a href="#">Blog</a></li>
+                    <li class="menu--item web"><a href="#">Contato</a></li>
+                    <li class="menu--item web"><a href="#">Filhotes</a></li>
+                    <li class="menu--item hover-linha dropdown">
+                        Nossos Gatos
+                        <img class="submenu--active" src="./img/arrow-down-sign-to-navigate.png" alt="arrow left">
+                        <ul class="submenu toggle">
+                            <li class="submenu--item toggle"><a href="#">Norueguês da floresta</a></li>
+                            <li class="submenu--item toggle"><a href="#">Ragdoll</a></li>
+                            <li class="submenu--item toggle"><a href="#">Britsh</a></li>
+                            <li class="submenu--item toggle"><a href="#">Minuet</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="menu--hamburger active">
+                    <div class="burger">
+                        <span class="burgertop"></span>
+                        <span class="burgermiddle"></span>
+                        <span class="burgerbottom"></span>
+                    </div>
+    
+                    <div class="burgerclose">
+                        <span class="burgerclosetop"></span>
+                        <span class="burgerclosebottom"></span>
+                    </div>
+                
                 </div>
-            </div>
-        </nav>
-       </div>
+            </nav>
+
+            <nav class="navbar--mobile">
+                
+                <ul class="menu--mobile">
+                    
+                    <li class="menu-mobile--item"><a href="#">Home</a></li>
+                    <li class="menu-mobile--item"><a href="#">Sobre</a></li>
+                    <li class="menu-mobile--item web"><a href="#">Blog</a></li>
+                    <li class="menu-mobile--item web"><a href="#">Contato</a></li>
+                    <li class="menu-mobile--item web"><a href="#">Filhotes</a></li>
+
+                    <li class="menu-mobile--item dropdown-mobile">
+                        Nossos Gatos
+                        <img src="./img/arrow-down-sign-to-navigate-white.png" alt="arrow left">
+                        <ul class="submenu--mobile">
+                            <li class="submenu-mobile--item toggle"><a href="#">Norueguês da floresta</a></li>
+                            <li class="submenu-mobile--item toggle"><a href="#">Ragdoll</a></li>
+                            <li class="submenu-mobile--item toggle"><a href="#">Britsh</a></li>
+                            <li class="submenu-mobile--item toggle"><a href="#">Minuet</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </nav>
+        </div>
     </header>
+    
     <section id="sobre">
         <img id="sobre-img" src="" alt="">
        <div class="conteudo">
@@ -63,8 +91,8 @@
         </p> -->
        </div>
     </section>
-    <script src="main.js"></script>
-    <script src="hamburger.js"></script>
+    <script src="/scripts/hamburger.js"></script>
+    <script src="/scripts/main.js"></script>
     <script>
 
 

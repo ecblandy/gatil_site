@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400&display=swap%27%29%3B');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +10,7 @@ ul {
   list-style: none;
 }
 
-a, .menu--item{
+a,.menu--item{
   text-decoration: none;
   color: #4e4640;
   font-family: 'Bebas Neue', sans-serif;
@@ -17,7 +19,7 @@ a, .menu--item{
 body {
   height: 100vh;
   width: 100%;
-  background-image: url('./img/cat-7287671_1280.jpg');
+  background-image: url('/img/cat-7287671_1280.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -46,6 +48,7 @@ header {
   margin: 0px 10%;
   align-items: center;
 }
+
 
 .logo img {
   max-width: 85px;
@@ -160,8 +163,11 @@ header {
 }
 
 .burger{
-  width:30px;
-  height:30px;
+  position: fixed;
+  right: 80px;
+  top: 30px;
+  width:50px;
+  height:50px;
   border: 2px solid #4e4640;
   border-radius: 5px;
   display:flex;
@@ -172,16 +178,19 @@ header {
   
   .burger span{
   width:80%;
-  height:3px;
+  height:6px;
   background: #4e4640;
   margin: 6%;
   }
   
   .burgerclose{
   display:none;
-  width:30px;
-  height:30px;
-  border: 2px solid #4e4640;
+  position: fixed;
+  right: 80px;
+  top: 30px;
+  width:50px;
+  height:50px;
+  border: 2px solid #fff;
   border-radius: 5px;
   justify-content:center;
   align-items:center;
@@ -191,7 +200,7 @@ header {
   .burgerclose span{
   width:80%;
   height:10%;
-  background: #4e4640;
+  background: #fff;
   margin:-5%;
   }
   
@@ -303,10 +312,21 @@ header {
   }
   }
 
-
+@media screen and (min-width: 761px) {
+  .navbar--mobile {
+    display: none;
+  }
+}
 
 
 @media screen and (max-width: 760px) {
+
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10%;
+  }
 
   .menu {
     display: none;
@@ -314,6 +334,98 @@ header {
 
   .menu--hamburger {
     display: block;
+    z-index: 999;
   }
 
+  .menu--mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    background-color: #4e4640cc;
+    margin: 0;
+    padding: 100px 20px;
+    transition: 1s ease;
+  }
+
+  .active {
+    right: 0;
+  }
+
+  .menu-mobile--item {
+    border-bottom: 3px solid #e4c397;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .menu-mobile--item a,
+  .menu-mobile--item {
+    color: #fff ;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+  }
+
+  .menu-mobile--item a:hover,
+  .menu-mobile--item:hover {
+    color: #fde1ac;
+    font-weight: normal;
+  }
+
+  .dropdown-mobile {
+    position: relative;
+    padding: 10px 20px;
+    border: none;
+  }
+
+  .dropdown-mobile:hover .submenu--mobile {
+    display: block;
+  }
+
+  .submenu--mobile {
+    position: absolute;
+    background-color: #e4c397;
+    border-radius: 10px;
+    padding: 10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+  }
+
+  .submenu--mobile li {
+    padding: 10px 0px;
+    border-bottom: 2px solid #4e4640;
+  }
+
+  .submenu-mobile--item a {
+    color: #554b43;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+  }
+
+  .dropdown-mobile img {
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .dropdown-mobile img {
+    transform: rotate(90deg);
+    width: 13px;
+    position: absolute;
+    right: 4px;
+    top: 20px;
+  }
+  
+  .dropdown-mobile:hover .submenu {
+    display: block;
+  }
+  
+  .dropdown-mobile:hover img {
+    transform: rotate(360deg);
+    transform-origin: left top 0;
+    right: 2px;
+  }
 }
